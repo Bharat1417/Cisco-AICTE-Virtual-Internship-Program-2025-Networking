@@ -1,0 +1,4 @@
+hostname PC2
+interface eth0
+ ip address 192.168.1.11 255.255.255.0
+ gateway 192.168.1.1

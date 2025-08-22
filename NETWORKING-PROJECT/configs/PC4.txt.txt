@@ -1,0 +1,4 @@
+hostname PC4
+interface eth0
+ ip address 192.168.2.11 255.255.255.0
+ gateway 192.168.2.1

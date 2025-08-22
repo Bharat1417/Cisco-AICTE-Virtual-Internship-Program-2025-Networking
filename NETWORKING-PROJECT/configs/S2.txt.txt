@@ -1,0 +1,9 @@
+hostname S2
+vlan 30
+ name HR
+vlan 40
+ name ACCOUNTS
+interface FastEthernet0/1
+ switchport access vlan 30
+interface FastEthernet0/2
+ switchport access vlan 40

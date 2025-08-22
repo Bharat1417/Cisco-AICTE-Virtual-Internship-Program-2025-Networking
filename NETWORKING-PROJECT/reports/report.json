@@ -1,0 +1,248 @@
+{
+    "nodes": [
+        [
+            "PC1",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.1.10",
+                        "mask": "255.255.255.0"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [],
+                "hostname": "PC1",
+                "gateway": "192.168.1.1"
+            }
+        ],
+        [
+            "PC2",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.1.11",
+                        "mask": "255.255.255.0"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [],
+                "hostname": "PC2",
+                "gateway": "192.168.1.1"
+            }
+        ],
+        [
+            "PC3",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.2.10",
+                        "mask": "255.255.255.0"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [],
+                "hostname": "PC3",
+                "gateway": "192.168.2.1"
+            }
+        ],
+        [
+            "PC4",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.2.11",
+                        "mask": "255.255.255.0"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [],
+                "hostname": "PC4",
+                "gateway": "192.168.2.1"
+            }
+        ],
+        [
+            "PC5",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.3.10",
+                        "mask": "255.255.255.0"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [],
+                "hostname": "PC5",
+                "gateway": "192.168.3.1"
+            }
+        ],
+        [
+            "PC6",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.3.11",
+                        "mask": "255.255.255.0"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [],
+                "hostname": "PC6",
+                "gateway": "192.168.3.1"
+            }
+        ],
+        [
+            "R1",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.1.1",
+                        "mask": "255.255.255.0",
+                        "bandwidth": "1000"
+                    },
+                    {
+                        "ip": "10.0.0.1",
+                        "mask": "255.255.255.252",
+                        "bandwidth": "1000"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [
+                    "ospf"
+                ],
+                "hostname": "R1"
+            }
+        ],
+        [
+            "R2",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.2.1",
+                        "mask": "255.255.255.0",
+                        "bandwidth": "1000"
+                    },
+                    {
+                        "ip": "10.0.0.2",
+                        "mask": "255.255.255.252",
+                        "bandwidth": "1000"
+                    },
+                    {
+                        "ip": "10.0.0.5",
+                        "mask": "255.255.255.252",
+                        "bandwidth": "1000"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [
+                    "ospf"
+                ],
+                "hostname": "R2"
+            }
+        ],
+        [
+            "R3",
+            {
+                "interfaces": [
+                    {
+                        "ip": "192.168.3.1",
+                        "mask": "255.255.255.0",
+                        "bandwidth": "1000"
+                    },
+                    {
+                        "ip": "10.0.0.6",
+                        "mask": "255.255.255.252",
+                        "bandwidth": "1000"
+                    }
+                ],
+                "vlans": [],
+                "protocols": [
+                    "ospf"
+                ],
+                "hostname": "R3"
+            }
+        ],
+        [
+            "S1",
+            {
+                "interfaces": [],
+                "vlans": [
+                    "10",
+                    "20"
+                ],
+                "protocols": [],
+                "hostname": "S1"
+            }
+        ],
+        [
+            "S2",
+            {
+                "interfaces": [],
+                "vlans": [
+                    "30",
+                    "40"
+                ],
+                "protocols": [],
+                "hostname": "S2"
+            }
+        ],
+        [
+            "S3",
+            {
+                "interfaces": [],
+                "vlans": [
+                    "50",
+                    "60"
+                ],
+                "protocols": [],
+                "hostname": "S3"
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "PC1",
+            "S1"
+        ],
+        [
+            "PC2",
+            "S2"
+        ],
+        [
+            "PC3",
+            "S3"
+        ],
+        [
+            "PC4",
+            "S1"
+        ],
+        [
+            "PC5",
+            "S2"
+        ],
+        [
+            "PC6",
+            "S3"
+        ],
+        [
+            "R1",
+            "R2"
+        ],
+        [
+            "R1",
+            "S1"
+        ],
+        [
+            "R2",
+            "R3"
+        ],
+        [
+            "R2",
+            "S2"
+        ],
+        [
+            "R3",
+            "S3"
+        ]
+    ],
+    "validation_issues": []
+}

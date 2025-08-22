@@ -1,0 +1,9 @@
+hostname S3
+vlan 50
+ name SALES
+vlan 60
+ name IT
+interface FastEthernet0/1
+ switchport access vlan 50
+interface FastEthernet0/2
+ switchport access vlan 60
